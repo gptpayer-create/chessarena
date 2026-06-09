@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a1209">
+  <link rel="canonical" href="https://chessarena.online/about.html">
+  <meta property="og:url" content="https://chessarena.online/about.html">
+  <meta property="og:site_name" content="ChessArena">
+  <meta property="og:type" content="website">
+  <meta name="description" content="About ChessArena — free online chess with 20 languages, dark/light mode, and fullscreen board. No registration required.">
+  <title>About ChessArena</title>
+  <link rel="stylesheet" href="css/style.css">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZX1DF100MB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZX1DF100MB');
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="logo">♟ Chess<span>Arena</span></a>
+  <div class="header-right">
+    <nav class="site-nav" id="main-nav">
+      <a href="index.html" data-nav="play">Play</a><a href="how-to-play.html" data-nav="how">How to Play</a><a href="rules.html" data-nav="rules">Rules</a><a href="about.html" class="active" data-nav="about">About</a><a href="contact.html" data-nav="contact">Contact</a>
+    </nav>
+    <div class="lang-wrap"><button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">🇬🇧 English <span style="opacity:.5;font-size:.7rem;">▼</span></button><div class="lang-dropdown" id="lang-dropdown"></div></div>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">☀️</button>
+    <button class="hamburger" onclick="document.getElementById('main-nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+<div class="page-hero" data-icon="♛"><h1>About ChessArena</h1><p>Free online chess for everyone — no download, no account, no cost.</p></div>
+<div style="max-width:1060px;margin:1.2rem auto 0;padding:0 1rem;">
+  <div style="display:flex;align-items:center;gap:1.2rem;background:linear-gradient(135deg,rgba(201,162,39,.10),rgba(201,162,39,.04));border:1px solid rgba(201,162,39,.35);border-left:4px solid var(--gold);border-radius:12px;padding:1.2rem 1.5rem;">
+    <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#b07d2a);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">♟</div>
+    <div>
+      <div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin-bottom:.2rem;">Developer</div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--gold);">MD Sahil</div>
+      <div style="font-size:.85rem;color:var(--text-mid);margin-top:.15rem;">Creator &amp; Developer of ChessArena</div>
+    </div>
+  </div>
+</div>
+<div style="max-width:1060px;margin:0 auto;padding:2rem 1rem;display:block;">
+<div class="content-wrap" style="margin:0;max-width:100%;">
+  <h2>Our Mission</h2>
+  <p>ChessArena exists to give everyone a fast, clean, completely free place to play chess online. Open your browser and start playing — no sign-ups, no downloads, no paywalls.</p>
+  <h2>Features</h2>
+  <div class="card-grid">
+    <div class="card"><div class="card-icon">🌐</div><h3>20 Languages</h3><p>Full UI in English, Hindi, Spanish, French, German, Portuguese, Russian, Arabic, Chinese, Japanese, Korean, Italian, Turkish, Dutch, Polish, Bengali, Urdu, Vietnamese, Indonesian, Swahili.</p></div>
+    <div class="card"><div class="card-icon">🌙</div><h3>Dark & Light Mode</h3><p>Elegant dark mahogany theme and a bright light theme — your preference is saved automatically.</p></div>
+    <div class="card"><div class="card-icon">⛶</div><h3>Fullscreen Board</h3><p>Expand the chess board to fill your entire screen for a focused, immersive game experience.</p></div>
+    <div class="card"><div class="card-icon">🤖</div><h3>Smart AI</h3><p>Minimax AI with alpha-beta pruning — strong enough to challenge beginners and casual players.</p></div>
+    <div class="card"><div class="card-icon">👥</div><h3>2-Player Mode</h3><p>Play with a friend on the same device with the Flip button for comfortable alternating turns.</p></div>
+    <div class="card"><div class="card-icon">📱</div><h3>Mobile Friendly</h3><p>Fully responsive on desktop, tablet, and smartphone. No app required.</p></div>
+  </div>
+  <h2>Full Chess Rules Implemented</h2>
+  <ul>
+    <li>All piece movements (King, Queen, Rook, Bishop, Knight, Pawn)</li>
+    <li>Castling — Kingside and Queenside</li>
+    <li>En Passant capture</li>
+    <li>Pawn Promotion (choose your piece)</li>
+    <li>Check, Checkmate, and Stalemate detection</li>
+    <li>Move history in algebraic notation</li>
+    <li>Captured pieces display</li>
+    <li>Undo move support</li>
+  </ul>
+  <h2>A Brief History of Chess</h2>
+  <p>Chess originated in northern India during the Gupta Empire (6th century AD) as <em>Chaturanga</em>. It spread to Persia, then the Arab world, reaching Europe via Spain in the 10th century. Modern rules were fixed by the 15th–19th centuries. Today over <strong>600 million people</strong> play chess worldwide, governed by FIDE (Fédération Internationale des Échecs).</p>
+  <h2>Benefits of Playing Chess</h2>
+  <div class="card-grid">
+    <div class="card"><div class="card-icon">🧠</div><h3>Improves Memory</h3><p>Patterns, openings, and positions strengthen both short and long-term memory.</p></div>
+    <div class="card"><div class="card-icon">🎯</div><h3>Enhances Focus</h3><p>Chess demands sustained concentration — a skill that transfers to work and study.</p></div>
+    <div class="card"><div class="card-icon">💡</div><h3>Problem Solving</h3><p>Every position is a unique logical and creative problem to solve.</p></div>
+    <div class="card"><div class="card-icon">😌</div><h3>Reduces Stress</h3><p>Many find chess a meditative, absorbing escape from daily pressures.</p></div>
+  </div>
+  <div style="text-align:center;margin-top:2.5rem;"><a href="index.html" class="btn btn-primary btn-lg">▶ Play Now</a> &nbsp; <a href="contact.html" class="btn btn-lg">Contact Us</a></div>
+</div>
+</div>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo">♟ Chess<span>Arena</span></a><p class="footer-tagline">Free chess · 20 languages · Dark/Light mode</p></div>
+    <div class="footer-col"><h4>Play</h4><ul><li><a href="index.html">Play</a></li><li><a href="how-to-play.html">How to Play</a></li><li><a href="rules.html">Rules</a></li></ul></div>
+    <div class="footer-col"><h4>Site</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 ChessArena.</span><span><a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div>
+</footer>
+<script src="js/chess.js"></script>
+</body></html>

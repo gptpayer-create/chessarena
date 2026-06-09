@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a1209">
+  <link rel="canonical" href="https://chessarena.online/contact.html">
+  <meta property="og:url" content="https://chessarena.online/contact.html">
+  <meta property="og:site_name" content="ChessArena">
+  <meta property="og:type" content="website">
+  <meta name="description" content="Contact ChessArena — report bugs, suggest features, or send a general enquiry about our free online chess game.">
+  <title>Contact Us | ChessArena</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+    .info-card{background:var(--bg2);border:1px solid var(--border2);border-radius:10px;padding:1.5rem;transition:background .3s;}
+    .info-card h3{font-family:'Playfair Display',serif;color:var(--gold);margin-bottom:1rem;font-size:1.05rem;}
+    .info-item{display:flex;gap:.75rem;align-items:flex-start;margin-bottom:1rem;}
+    .info-icon{font-size:1.3rem;flex-shrink:0;margin-top:.1rem;}
+    .info-text strong{display:block;color:var(--text);font-size:.88rem;margin-bottom:.2rem;}
+    .info-text p{color:var(--text-mid);font-size:.84rem;margin:0;line-height:1.5;}
+    .faq-item{background:var(--bg2);border:1px solid var(--border2);border-radius:8px;margin-bottom:.75rem;overflow:hidden;transition:background .3s;}
+    .faq-q{padding:.85rem 1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--text);font-size:.9rem;user-select:none;}
+    .faq-q:hover{background:var(--bg3);}
+    .faq-q .arrow{color:var(--gold);transition:transform .25s;font-size:.8rem;}
+    .faq-q.open .arrow{transform:rotate(180deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+    .faq-a p{padding:.1rem 1rem 1rem;color:var(--text-mid);font-size:.86rem;line-height:1.7;}
+    .success-msg{display:none;background:rgba(20,85,30,.25);border:1px solid rgba(20,120,30,.5);border-radius:8px;padding:1rem 1.2rem;color:#6dcc8a;font-size:.9rem;margin-top:1rem;}
+    .success-msg.show{display:block;}
+    @media(max-width:720px){.contact-grid{grid-template-columns:1fr;}}
+  </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZX1DF100MB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZX1DF100MB');
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="logo">♟ Chess<span>Arena</span></a>
+  <div class="header-right">
+    <nav class="site-nav" id="main-nav">
+      <a href="index.html" data-nav="play">Play</a><a href="how-to-play.html" data-nav="how">How to Play</a><a href="rules.html" data-nav="rules">Rules</a><a href="about.html" data-nav="about">About</a><a href="contact.html" class="active" data-nav="contact">Contact</a>
+    </nav>
+    <div class="lang-wrap"><button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">🇬🇧 English <span style="opacity:.5;font-size:.7rem;">▼</span></button><div class="lang-dropdown" id="lang-dropdown"></div></div>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">☀️</button>
+    <button class="hamburger" onclick="document.getElementById('main-nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+<div class="page-hero" data-icon="✉"><h1>Contact Us</h1><p>Have a question, found a bug, or want to share feedback? We'd love to hear from you.</p></div>
+
+<div class="content-wrap">
+  <div class="contact-grid">
+    <!-- FORM -->
+    <div>
+      <h2 style="margin-top:0;">Send a Message</h2>
+      <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" placeholder="e.g. Rahul Sharma" autocomplete="name"></div>
+      <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="your@email.com" autocomplete="email"></div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject">
+          <option value="">— Select a topic —</option>
+          <option value="bug">🐛 Report a Bug</option>
+          <option value="suggestion">💡 Feature Suggestion</option>
+          <option value="lang">🌐 Language / Translation Issue</option>
+          <option value="general">💬 General Enquiry</option>
+          <option value="ad">📢 Advertising</option>
+          <option value="other">📌 Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Describe your issue or suggestion in detail…"></textarea></div>
+      <button class="btn btn-primary" style="width:100%;padding:.75rem;" onclick="submitForm()">Send Message ➤</button>
+      <div class="success-msg" id="success-msg">✅ Thank you! Your message has been sent. We'll get back to you within 2–3 business days.</div>
+      <p style="color:var(--text-dim);font-size:.78rem;margin-top:.8rem;">By submitting, you agree to our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+    </div>
+
+    <!-- INFO -->
+    <div>
+      <div class="info-card" style="margin-bottom:1.5rem;">
+        <h3>📬 Get in Touch</h3>
+        <div class="info-item"><span class="info-icon">⏱</span><div class="info-text"><strong>Response Time</strong><p>We typically respond within 2–3 business days.</p></div></div>
+        <div class="info-item"><span class="info-icon">🌐</span><div class="info-text"><strong>Language Issues</strong><p>Found a translation error in one of our 20 languages? Select "Language Issue" and let us know.</p></div></div>
+        <div class="info-item"><span class="info-icon">🐛</span><div class="info-text"><strong>Reporting Bugs</strong><p>Include your browser name, device type, and what went wrong. Screenshots help!</p></div></div>
+        <div class="info-item"><span class="info-icon">💡</span><div class="info-text"><strong>Feature Requests</strong><p>New game modes, difficulty levels, UI improvements — all ideas welcome.</p></div></div>
+      </div>
+      <div class="info-card">
+        <h3>🔗 Quick Links</h3>
+        <ul style="list-style:none;padding:0;">
+          <li style="margin-bottom:.6rem;"><a href="how-to-play.html" style="color:var(--text-mid);font-size:.88rem;text-decoration:none;">♟ How to Play Chess →</a></li>
+          <li style="margin-bottom:.6rem;"><a href="rules.html"       style="color:var(--text-mid);font-size:.88rem;text-decoration:none;">📖 Full Chess Rules →</a></li>
+          <li style="margin-bottom:.6rem;"><a href="about.html"       style="color:var(--text-mid);font-size:.88rem;text-decoration:none;">ℹ About ChessArena →</a></li>
+          <li style="margin-bottom:.6rem;"><a href="privacy-policy.html" style="color:var(--text-mid);font-size:.88rem;text-decoration:none;">🔒 Privacy Policy →</a></li>
+          <li><a href="terms.html" style="color:var(--text-mid);font-size:.88rem;text-decoration:none;">📋 Terms of Service →</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <h2 style="margin-top:3rem;">Frequently Asked Questions</h2>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is ChessArena completely free? <span class="arrow">▼</span></div><div class="faq-a"><p>Yes — 100% free. No subscriptions or paywalls. The site is supported by Google AdSense advertising.</p></div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do I need an account to play? <span class="arrow">▼</span></div><div class="faq-a"><p>No account, no registration. Open the website and start playing immediately.</p></div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I change the language? <span class="arrow">▼</span></div><div class="faq-a"><p>Click the language button in the top-right corner of the header. Choose from 20 languages including Hindi, Arabic, Chinese, Japanese, Spanish, French, and more. Your selection is saved automatically.</p></div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How do I switch between dark and light mode? <span class="arrow">▼</span></div><div class="faq-a"><p>Click the ☀️/🌙 button in the header next to the language selector. Your theme choice is saved in your browser and will be remembered next time you visit.</p></div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How does fullscreen mode work? <span class="arrow">▼</span></div><div class="faq-a"><p>On the game page, click the "⛶ Fullscreen" button below the chess board. The board will expand to fill your entire screen. Click "✕ Exit" or press Escape to return to normal view.</p></div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How does the AI work? <span class="arrow">▼</span></div><div class="faq-a"><p>Our AI uses the <strong>Minimax algorithm with alpha-beta pruning</strong> — a classic technique that searches several moves ahead. It uses piece-value tables to make strategic decisions and provides a solid challenge for beginners and casual players.</p></div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I play on my phone? <span class="arrow">▼</span></div><div class="faq-a"><p>Yes! ChessArena is fully responsive and works on mobile phones, tablets, and desktops. Just open the website in your browser — no app download needed.</p></div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Are my game moves saved between sessions? <span class="arrow">▼</span></div><div class="faq-a"><p>Games are not saved when you close the browser tab — this is by design to protect your privacy. However, your language and theme preferences are saved and will be remembered next time.</p></div></div>
+
+  <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">I found a translation error. How do I report it? <span class="arrow">▼</span></div><div class="faq-a"><p>Use the contact form above and select "Language / Translation Issue" as your subject. Please mention which language, which part of the UI, and what the correct translation should be. We appreciate your help!</p></div></div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo">♟ Chess<span>Arena</span></a><p class="footer-tagline">Free chess · 20 languages · Dark/Light mode</p></div>
+    <div class="footer-col"><h4>Play</h4><ul><li><a href="index.html">Play</a></li><li><a href="how-to-play.html">How to Play</a></li><li><a href="rules.html">Rules</a></li></ul></div>
+    <div class="footer-col"><h4>Site</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 ChessArena.</span><span><a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div>
+</footer>
+
+<script src="js/chess.js"></script>
+<script>
+function submitForm(){
+  const n=document.getElementById('name').value.trim();
+  const e=document.getElementById('email').value.trim();
+  const s=document.getElementById('subject').value;
+  const m=document.getElementById('message').value.trim();
+  if(!n||!e||!s||!m){alert('Please fill in all fields.');return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){alert('Please enter a valid email address.');return;}
+  document.getElementById('success-msg').classList.add('show');
+  document.getElementById('name').value='';
+  document.getElementById('email').value='';
+  document.getElementById('subject').value='';
+  document.getElementById('message').value='';
+  document.getElementById('success-msg').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function toggleFaq(el){
+  el.classList.toggle('open');
+  const a=el.nextElementSibling;
+  a.style.maxHeight=el.classList.contains('open')?a.scrollHeight+'px':'0';
+}
+</script>
+</body></html>
